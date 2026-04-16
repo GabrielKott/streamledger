@@ -1620,3 +1620,76 @@ input:-webkit-autofill {
   border: 1px solid rgba(255, 68, 102, 0.3);
   box-shadow: 0 0 10px rgba(255, 68, 102, 0.3);
 }
+
+/* ── Modal Newsletter ── */
+.modal-newsletter {
+  position: fixed;
+  z-index: 2000;
+  inset: 0;
+  background: rgba(18, 18, 20, 0.85);
+  backdrop-filter: blur(8px);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-newsletter__card {
+  background: #1a2a1a;
+  border: 1.5px solid var(--neon);
+  box-shadow: 0 0 30px rgba(93, 255, 155, 0.25), 0 15px 40px rgba(0, 0, 0, 0.8);
+  max-width: 420px;
+  width: 90%;
+  border-radius: 16px;
+  padding: 48px 40px;
+  text-align: center;
+}
+
+.modal-newsletter__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(93, 255, 155, 0.08);
+  border: 1.5px solid var(--neon);
+  box-shadow: var(--neon-glow);
+  font-size: 28px;
+  color: var(--neon);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.modal-newsletter__title {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--neon);
+  text-shadow: 0 0 20px rgba(93, 255, 155, 0.4);
+  margin-bottom: 12px;
+}
+
+.modal-newsletter__text {
+  color: var(--text-dim);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.modal-newsletter__btn {
+  display: inline-block;
+  padding: 11px 40px;
+  background: var(--neon);
+  color: #0a0a0a;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 0 16px rgba(93, 255, 155, 0.4);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.modal-newsletter__btn:hover {
+  background: var(--neon-hover);
+  color: #0a0a0a;
+  transform: translateY(-2px);
+  box-shadow: 0 0 28px rgba(93, 255, 155, 0.7);
+}

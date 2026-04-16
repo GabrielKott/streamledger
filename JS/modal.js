@@ -1,30 +1,27 @@
 const form = document.getElementById('newsletter-form');
-const modal = document.getElementById('success-modal');
-const overlay = modal.querySelector('.modal__overlay');
+const modal = document.getElementById('modal-newsletter-success');
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
-
     abrirModal();
 });
 
 function abrirModal() {
-    modal.hidden = false;
-    document.body.style.overflow = 'hidden'; // trava scroll da página
-    modal.querySelector('.modal__card').focus();
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
 }
 
 function fecharModal() {
-    modal.hidden = true;
+    modal.style.display = 'none';
     document.body.style.overflow = '';
 }
 
-// Fechar clicando no overlay
-overlay.addEventListener('click', fecharModal);
+// Fechar clicando fora do card
+modal.addEventListener('click', function (e) {
+    if (e.target === modal) fecharModal();
+});
 
 // Fechar com ESC
 document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && !modal.hidden) {
-        fecharModal();
-    }
+    if (e.key === 'Escape' && modal.style.display === 'flex') fecharModal();
 });
