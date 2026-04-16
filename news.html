@@ -34,7 +34,7 @@
             <h1>Seja um Ledger</h1>
             <p class="newsletter__subtitle">Tenha acesso a atualizações em primeira mão</p>
 
-            <form action="success.html" method="get" class="newsletter__form">
+            <fo action="success.html" method="get" class="newsletter__form">
 
               <div class="form__group">
                 <label class="form__label" for="nome">Nome completo</label>
@@ -73,7 +73,7 @@
 
               <button type="submit" class="form__submit">Concluir</button>
 
-            </form>
+            <form id="newsletter-form" class="newsletter__form">
           </div>
 
           <div class="newsletter__media">
@@ -94,6 +94,22 @@
       </div>
     </div>
   </footer>
+  
+<!-- Modal de Sucesso -->
+<div id="success-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+  <div class="modal__overlay"></div>
+  <div class="modal__card">
+    <div class="modal__bg">
+      <img src="assets/hero-dashboard.svg" alt="">
+    </div>
+    <div class="modal__content">
+      <h2 id="modal-title">Sucesso!</h2>
+      <p>Você será notificado quando<br>houver novas atualizações!</p>
+      <a href="index.html" class="success-page__cta">Início</a>
+    </div>
+  </div>
+</div>
 
+<script src="js/modal.js"></script>
 </body>
 </html>
